@@ -14,7 +14,7 @@
   float: right;
   width: 435px;
   font-family: $bold;
-  color: #2d3e50;
+  color: $fcolor;
   font-size: 0;
   line-height: 1;
   &__item{
@@ -32,6 +32,9 @@
     text-transform: uppercase;
     &:hover{
       color: #3b99d7;
+    }
+    &:visited{
+      color: #f3f4f5;
     }
   }
 }

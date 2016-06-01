@@ -1,0 +1,207 @@
+/*--- Main banner ---*/
+.main-banner{
+  background:  url("/images/banner-bg.png") 0 0 no-repeat;
+  background-size: cover;
+  height: 330px;
+  &__title{
+    padding: 85px 0 0 40px;
+    font-size: 36px;
+    line-height: 1.6;
+    color: #fff;
+    font-family: $bold;
+    span{
+      display: block;
+    }
+  }
+}
+
+/*--- Main servis ---*/
+.main-servis{
+  background: #2d3e50;
+  &__wrapper{
+    background: #fff;
+    width: 780px;
+    margin: 0 auto;
+    display: table;
+    position: relative;
+    top: -55px;
+  }
+  &__cell{
+    display: table-cell;
+    width: 260px;
+    text-align: center;
+    padding: 15px 30px 25px;
+  }
+  &__img{
+    margin-bottom: 15px;
+  }
+  &__title{
+    font-family: $bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+  &__descr{
+    font-family: $light;
+    font-size: 14px;
+    line-height: 1.43;
+    margin-bottom: 15px;
+  }
+  &__link{
+    color: #fff;
+    text-transform: uppercase;
+    background: #3b99d7;
+    font-size: 12px;
+    line-height: 1.7;
+    padding: 5px 10px;
+    box-shadow: 0 2px 0 #3388c0;
+    font-family: $heavy;
+    &:hover{
+      background: #3388c0;
+    }
+  }
+}
+
+/*--- Main foto ---*/
+.main-foto{
+  padding: 35px 40px;
+  background: #fff;
+  &__title{
+    font-family: $bold;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 45px;
+    &:after{
+      content: "";
+      display: block;
+      background:  url("/images/wave.png") 0 0 no-repeat;
+      width: 88px;
+      height: 8px;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+  }
+  &__item{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+  &__horizontal-first{
+    height: 165px;
+    font-size: 0;
+    margin-bottom: 10px;
+  }
+  &__block1{
+    background:  url("/images/foto1.png") 50% 50% no-repeat;
+    background-size: cover;
+    width: 220px;
+    height: 100%;
+  }
+  &__block2{
+    background:  url("/images/foto2.png") 50% 50% no-repeat;
+    background-size: cover;
+    width: 480px;
+    height: 100%;
+  }
+  &__block3{
+    background:  url("/images/foto3.png") 50% 50% no-repeat;
+    background-size: cover;
+    width: 220px;
+    height: 100%;
+  }
+  &__horizontal-second{
+    height: 340px;
+    font-size: 0;
+  }
+  &__block4{
+    width: 220px;
+  }
+  &__vertical-block1{
+    background:  url("/images/foto4.png") 50% 50% no-repeat;
+    background-size: cover;
+    width: 220px;
+    height: 165px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  &__vertical-block2{
+    background:  url("/images/foto5.png") 50% 50% no-repeat;
+    background-size: cover;
+    width: 220px;
+    height: 165px;
+    display: block;
+    margin-left: 0;
+  }
+  &__block5{
+    background:  url("/images/foto6.png") 50% 50% no-repeat;
+    background-size: cover;
+    width: 230px;
+    height: 100%;
+  }
+  &__block6{
+    background:  url("/images/foto7.png") 50% 50% no-repeat;
+    background-size: cover;
+    width: 470px;
+    height: 100%;
+  }
+}
+
+/*--- Main works ---*/
+.main-works{
+  padding: 55px 110px 65px;
+  background:  url("/images/hiw-bg.png") 0 0 no-repeat;
+  background-size: cover;
+  color: #fff;
+  font-size: 0;
+  &__title{
+    font-size: 36px;
+    font-family: $bold;
+    text-align: center;
+    margin-bottom: 45px;
+    &:after{
+      content: "";
+      display: block;
+      background:  url("/images/wave1.png") 0 0 no-repeat;
+      width: 88px;
+      height: 8px;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+  }
+  &__item{
+    display: inline-block;
+    vertical-align: middle;
+    width: 200px;
+    font-size: 14px;
+    text-align: center;
+  }
+  &__link{
+    width: 135px;
+    display: block;
+    font-size: 14px;
+    line-height: 1.43;
+  }
+  &__img{
+    width: 107px;
+    height: 107px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    &--mail{
+      background:  url("/images/mail.svg") 50% 50% no-repeat;
+    }
+    &--comment{
+      background:  url("/images/comment.svg") 50% 50% no-repeat;
+    }
+    &--purse{
+      background:  url("/images/purse.svg") 50% 50% no-repeat;
+    }
+    &--airplan{
+      background:  url("/images/airplan.svg") 50% 50% no-repeat;
+    }
+  }
+}
