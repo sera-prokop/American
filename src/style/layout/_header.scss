@@ -1,0 +1,37 @@
+.header{
+  background: #fff;
+  padding: 0 40px;
+  @include clearfix;
+}
+
+.header-logo{
+  float: left;
+  width: 140px;
+  padding: 10px 0;
+}
+
+.header-menu{
+  float: right;
+  width: 435px;
+  font-family: $bold;
+  color: #2d3e50;
+  font-size: 0;
+  line-height: 1;
+  &__item{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 13px;
+    &:first-child{
+      margin: 0;
+    }
+  }
+  &__link{
+    padding: 40px 0;
+    display: block;
+    font-size: 16px;
+    text-transform: uppercase;
+    &:hover{
+      color: #3b99d7;
+    }
+  }
+}

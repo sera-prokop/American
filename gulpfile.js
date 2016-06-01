@@ -29,7 +29,8 @@ var path = {
       fonts: 'prod/fonts/'
     },
     src: {
-      js: 'src/js/main.js',
+      js: 'src/js/*.js',
+      js_vendor: 'src/js/vendor/*.js',
       md: 'src/js/modernizr.js',
       style: 'src/style/**/*.scss',
       img: 'src/images/img/*.*',
@@ -48,6 +49,7 @@ var path = {
     dev: {
       html: 'dev/',
       js: 'dev/js/',
+      js_vendor: 'dev/js/vendor/',
       css: 'dev/css/',
       img: 'dev/images/',
       fonts: 'dev/fonts/'
@@ -125,7 +127,15 @@ gulp.task('js:prod', function () {
 gulp.task('js:dev', function () {
   gulp.src(path.src.js)
     .pipe(rigger())
+    .pipe(uglify())
     .pipe(gulp.dest(path.dev.js));
+});
+
+gulp.task('js:dev_vendor', function () {
+    gulp.src(path.src.js_vendor)
+        .pipe(rigger())
+        .pipe(uglify())
+        .pipe(gulp.dest(path.dev.js_vendor));
 });
 
 // gulp.task('md:prod', function () {
@@ -255,6 +265,15 @@ gulp.task('sprite', function () {
 // });
 
 
+gulp.task('img', function() {
+    return gulp.src('src/images/**/**/**')
+        .pipe(imagemin({ optimizationLevel: 3, progressive: true}))
+        .pipe(gulp.dest('src/images/'));
+});
+
+
+
+
 gulp.task('prod', [
   'html:prod',
   'style:prod',
@@ -269,6 +288,7 @@ gulp.task('dev', [
   'html:dev',
   'style:dev',
   'js:dev',
+  'js:dev_vendor',
   // 'md:dev',
   'fonts:dev',
   'image:dev',
@@ -307,6 +327,7 @@ gulp.task('watch_dev', function(){
     });
   watch([path.watch.js], function(event, cb) {
     gulp.start('js:dev');
+    gulp.start('js:dev_vendor');
     // gulp.start('md:dev');
     });
   watch([path.watch.sprite], function(event, cb) {

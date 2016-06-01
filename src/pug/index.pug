@@ -1,10 +1,11 @@
 doctype html
 html.no-js(lang='RU-ru')
   head
-    include template/head
+    include template/_head.pug
   body
-    include template/header
-    include template/main
-    include template/footer
+    .wrapper
+      include template/_header.pug
+      include template/_main.pug
+      include template/_footer.pug
 
-    include template/script
+      include template/_script.pug
