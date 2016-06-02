@@ -77,8 +77,7 @@
       background:  url("/images/wave.png") 0 0 no-repeat;
       width: 88px;
       height: 8px;
-      margin: 0 auto;
-      margin-top: 30px;
+      margin: 30px auto 0;
     }
   }
   &__item{
@@ -167,8 +166,7 @@
       background:  url("/images/wave1.png") 0 0 no-repeat;
       width: 88px;
       height: 8px;
-      margin: 0 auto;
-      margin-top: 30px;
+      margin: 30px auto 0;
     }
   }
   &__item{
@@ -189,8 +187,7 @@
     height: 107px;
     border: 2px solid #fff;
     border-radius: 50%;
-    margin: 0 auto;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
     &--mail{
       background:  url("/images/mail.svg") 50% 50% no-repeat;
     }
@@ -202,6 +199,99 @@
     }
     &--airplan{
       background:  url("/images/airplan.svg") 50% 50% no-repeat;
+    }
+  }
+}
+
+/*--- Main Reviews ---*/
+.main-reviews{
+  padding: 50px 0 40px 0;
+  background: #fff;
+  &__title{
+    font-family: $bold;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 45px;
+    &:after{
+      content: "";
+      display: block;
+      background:  url("/images/wave.png") 0 0 no-repeat;
+      width: 88px;
+      height: 8px;
+      margin: 30px auto 0;
+    }
+  }
+  &__one{
+    width: 780px;
+    margin: 0 auto;
+  }
+  &__descr{
+    width: 590px;
+    margin: 0 auto 5px;
+    box-sizing: border-box;
+    //border: 1px solid #cbcbcb;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px #cbcbcb,
+                -2px -2px 4px #cbcbcb;
+    padding: 40px 40px;
+    font-family: $light;
+    font-size: 14px;
+    line-height: 1.43;
+    position: relative;
+    &:after{
+      content: "";
+      background: #fff url("/images/crap.png") 0 0 no-repeat;
+      width: 79px;
+      height: 62px;
+      display: inline-block;
+      position: absolute;
+      bottom: -46px;
+    }
+  }
+  &__foto{
+    background:  url("/images/review-foto.png") 55% 40% no-repeat;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: bottom;
+  }
+  &__name{
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 30px;
+    font-family: $bold;
+    font-size: 24px;
+  }
+}
+
+/*--- Main app ---*/
+.main-app{
+  padding: 80px 0 100px 0;
+  background:  url("/images/app-bg.png") 50% 70% no-repeat;
+  background-size: cover;
+  &__title{
+    padding-left: 455px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 36px;
+    line-height: 1.6;
+    font-family: $bold;
+    color: #fff;
+    margin-right: 30px;
+  }
+  &__link{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 36px;
+    font-family: $bold;
+    color: #fff;
+    padding: 5px 40px;
+    background: #f6c640;
+    box-shadow: 0 5px 0 #dba308;
+    text-transform: uppercase;
+    &:hover{
+      background: #dba308;
     }
   }
 }

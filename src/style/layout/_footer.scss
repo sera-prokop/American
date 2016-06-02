@@ -1,0 +1,181 @@
+.footer{
+  background: #2d3e50;
+  color: #fff;
+  padding: 25px 40px;
+}
+
+/*--- Footer top ---*/
+.footer-top{
+  vertical-align: middle;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #969fa8;
+  @include clearfix;
+  margin-bottom: 25px;
+  &__logo{
+    width: 141px;
+    height: 60px;
+    overflow: hidden;
+    float: left;
+    a{
+      display: block;
+    }
+  }
+  &__social{
+    float: right;
+    font-size: 0;
+    padding-top: 10px;
+  }
+  &__item{
+    width: 43px;
+    height: 43px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+    background: #fff;
+    margin-left: 15px;
+    position: relative;
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+  &__link{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    display: block;
+    padding: 10px;
+    &:hover .fb{
+      fill: #3b5998;
+    }
+    &:hover .vk{
+      fill: #45668e;
+    }
+    &:hover .tw{
+      fill: #00aced;
+    }
+  }
+}
+
+/*--- Footer down ---*/
+.footer-down{
+  font-family: $light;
+  font-size: 12px;
+  line-height: 1.5;
+  @include clearfix;
+  &__title{
+    font-size: 14px;
+    font-family: $bold;
+    margin-bottom: 20px;
+  }
+  &__about{
+    float: left;
+    width: 430px;
+  }
+  &__about-descr{
+    width: 270px;
+  }
+  &__adress{
+    float: left;
+    width: 280px;
+  }
+  &__adress-descr{
+    margin-bottom: 10px;
+    span{
+      display: block;
+    }
+  }
+  &__adress-tel{
+    display: block;
+    padding: 10px 0;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  &__adress-mail{
+    display: block;
+    padding: 10px 0;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  &__question{
+    float: right;
+    width: 225px;
+  }
+  &__form{
+  }
+  &__form-input{
+    margin-bottom: 10px;
+    @include clearfix;
+    box-sizing: border-box;
+    label{
+      float: left;
+    }
+    input, textarea{
+      float: right;
+      width: 165px;
+      resize: none;
+      font-size: 12px;
+      line-height: 1;
+      font-family: $light;
+      padding: 5px 20px 5px 7px;
+      box-sizing: border-box;
+      border: 1px solid transparent;
+      &:focus{
+        border:1px solid #3b99d7;
+      }
+    }
+    textarea{
+      height: 75px;
+    }
+  }
+  &__form-button{
+    width: 165px;
+    display: inline-block;
+    @include clearfix;
+    position: relative;
+    right: -60px;
+    padding-top: 5px;
+    font-size: 12px;
+    font-family: $heavy;
+  }
+  &__reset{
+    float: left;
+    text-transform: uppercase;
+    padding: 7px 15px;
+    border: none;
+    background: #f6c640;
+    box-shadow: 0 2px 0 #dba308;
+    cursor: pointer;
+    color: #fff;
+    &:hover{
+      background: #dba308;
+    }
+  }
+  &__submit{
+    float: right;
+    text-transform: uppercase;
+    padding: 7px 15px;
+    border: none;
+    background: #3b99d7;
+    box-shadow: 0 2px 0 #3388c0;
+    cursor: pointer;
+    color: #fff;
+    &:hover{
+      background: #3388c0;
+    }
+  }
+}
+
+.footer-rights{
+  background: #19232d;
+  padding-left: 40px;
+  p{
+    color: #2c3c4e;
+    line-height: 11px;
+    font-family: $light;
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+}
