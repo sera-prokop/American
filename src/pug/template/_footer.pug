@@ -46,16 +46,16 @@ footer.footer
       a(href="mailto:youremail@gmail.com").footer-down__adress-mail youremail@mail.com
     .footer-down__question
       .footer-down__title Ask a question
-      form(action="#" method="POST").footer-down__form
+      form(action="" method="POST").footer-down__form
         .footer-down__form-input
+          input(type="text" class="required" name="names" placeholder="" required)#name.footer-form__check
           label(for="name") Name
-          input(type="text")#name
         .footer-down__form-input
+          input(type="email" class="required" name="email_address" placeholder="" required)#mail.footer-form__check
           label(for="mail") E-mail
-          input(type="text")#mail
         .footer-down__form-input
+          textarea(name="textarea" class="required" placeholder="" required)#textarea.footer-form__check
           label(for="textarea") Message
-          textarea#textarea
         .footer-down__form-button
           input(type='reset' value='Clean').footer-down__reset
           input(type='submit' value='Submit').footer-down__submit

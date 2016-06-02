@@ -107,6 +107,7 @@
   }
   &__form-input{
     margin-bottom: 10px;
+    position: relative;
     @include clearfix;
     box-sizing: border-box;
     label{
@@ -129,6 +130,21 @@
     textarea{
       height: 75px;
     }
+
+
+
+    .footer-form__error{
+      position: relative;
+      border: 1px solid #e84c3d;
+    }
+
+
+    .footer-form__check{
+      position: relative;
+
+    }
+
+
   }
   &__form-button{
     width: 165px;
@@ -149,6 +165,7 @@
     box-shadow: 0 2px 0 #dba308;
     cursor: pointer;
     color: #fff;
+    outline: none;
     &:hover{
       background: #dba308;
     }
@@ -162,6 +179,7 @@
     box-shadow: 0 2px 0 #3388c0;
     cursor: pointer;
     color: #fff;
+    outline: none;
     &:hover{
       background: #3388c0;
     }
@@ -177,5 +195,47 @@
     font-family: $light;
     font-size: 11px;
     text-transform: uppercase;
+  }
+}
+
+
+
+.footer-form__error + label{
+  &:after{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background:  url("/images/error.png") 0 0 no-repeat;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 13px;
+    width: 13px;
+  }
+}
+
+
+.footer-form__check:valid + label{
+  &:after{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background:  url("/images/check.png") 0 0 no-repeat;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 14px;
+    width: 14px;
+  }
+}
+
+.footer-form__check:not(:focus):valid{
+  border: 1px solid #95d042;
+}
+
+textarea.footer-form__check:valid + label, textarea.footer-form__error + label{
+  &:after{
+    content: '';
+    top: 15px;
   }
 }
