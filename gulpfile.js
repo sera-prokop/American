@@ -34,6 +34,7 @@ var path = {
       md: 'src/js/modernizr.js',
       style: 'src/style/**/*.scss',
       img: 'src/images/img/*.*',
+      favicon: 'src/favicon/*.*',
       fonts: 'src/fonts/**/*.*',
       pug: 'src/pug/*.pug',
       sprite: 'src/images/ico/*.*'
@@ -52,6 +53,7 @@ var path = {
       js_vendor: 'dev/js/vendor/',
       css: 'dev/css/',
       img: 'dev/images/',
+      favicon: 'dev/favicon/',
       fonts: 'dev/fonts/'
     },
     clean: './prod',
@@ -265,6 +267,16 @@ gulp.task('sprite', function () {
 // });
 
 
+
+// Фавиконки
+gulp.task('favicon', function () {
+    gulp.src(path.src.favicon)
+        .pipe(gulp.dest(path.dev.favicon))
+        .pipe(reload({stream: true}));
+});
+
+
+// Картинки сжатие
 gulp.task('img', function() {
     return gulp.src('src/images/**/**/**')
         .pipe(imagemin({ optimizationLevel: 3, progressive: true}))
